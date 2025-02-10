@@ -1,0 +1,80 @@
+.background-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.background-img img {
+  width: 100%;
+  height: 250px;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.search-bar {
+  width: 30%;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#button-addon2 {
+  background-color: black;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ip-adress-info {
+  display: flex;
+  border: 0.5px solid black;
+  width: 35%;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 10px;
+  color: gray;
+  z-index: 10;
+}
+
+.ip-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.ip-list li {
+  padding: 10px;
+  margin: 10px;
+  list-style-type: none;
+}
+
+.ip-list li p {
+  width: 100%;
+}
+
+.vertical-line {
+  border-left: 0.1px solid rgb(182, 181, 181);
+  height: 30px;
+  margin: 20px 0px;
+}
+
+#map {
+  position: relative;
+  height: 500px;
+  z-index: 1;
+}
