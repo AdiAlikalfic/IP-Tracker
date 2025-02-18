@@ -12,11 +12,14 @@
           placeholder="Search for any IP adress or domain"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
+          [(ngModel)]="ipAddress"
+          (keyup.enter)="getIpLocation()"
         />
         <button
           class="btn btn-outline-secondary"
           type="button"
           id="button-addon2"
+          (click)="getIpLocation()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,29 +37,32 @@
         </button>
       </div>
     </div>
-    <div class="ip-adress-info">
+    <div *ngIf="ipInfo" class="ip-adress-info">
       <ul class="ip-list">
         <li>
           <p>IP ADDRESS</p>
+          {{ ipInfo.ip || "N/A" }}
         </li>
         <div class="vertical-line"></div>
         <li>
           <p>LOCATION</p>
+          {{ ipInfo.location.city || "N/A" }}
+          {{ ipInfo.location.country || "N/A" }}
         </li>
         <div class="vertical-line"></div>
         <li>
           <p>TIMEZONE</p>
+          {{ ipInfo.location.timezone || "N/A" }}
         </li>
         <div class="vertical-line"></div>
         <li>
           <p>ISP</p>
+          {{ ipInfo.isp || "N/A" }}
         </li>
       </ul>
     </div>
   </div>
   <div id="map">
-    <!-- Dodati mapu sa API-a -->
-    <!-- Dodati API za IP adrese -->
+    <!-- Map -->
   </div>
 </div>
-<!-- Ispisati ip podatke u li element -->
